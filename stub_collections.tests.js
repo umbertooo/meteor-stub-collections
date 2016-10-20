@@ -2,15 +2,10 @@
 /* eslint-disable func-names, prefer-arrow-callback, no-unused-expressions */
 
 import { Meteor } from 'meteor/meteor';
-import { Mongo } from 'meteor/mongo';
 import { expect } from 'meteor/practicalmeteor:chai';
-import { SimpleSchema } from 'meteor/aldeed:simple-schema';
-
 import StubCollections from './stub_collections.js';
+import './widgets.js';
 
-const widgets = new Mongo.Collection('widgets');
-const schema = { schemaKey: { type: String, optional: true }};
-widgets.attachSchema(new SimpleSchema(schema))
 if (Meteor.isServer) {
   widgets.remove({});
   widgets.insert({});
