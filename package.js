@@ -22,6 +22,7 @@ Package.onUse(function onUse(api) {
 });
 
 Package.onTest(function onTest(api) {
+  api.use('matb33:collection-hooks@0.8.1');
   api.use('hwillson:stub-collections');
   api.use('aldeed:collection2@2.10.0');
   api.use(['ecmascript', 'mongo', 'practicalmeteor:chai']);
